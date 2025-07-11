@@ -6,7 +6,7 @@
 <!-- USAGE -->
 ## Usage
 
-Add This [Link](https://raw.githubusercontent.com/miladtahanian/V2RayCFGDumper/main/config.txt) in V2RayNG, Nekoray on Android or V2rayN or NekoBox on PC as a subscription link and update every 15 minute!
+Add This [Link](https://raw.githubusercontent.com/inicarus/ini/main/config.txt) in V2RayNG, Nekoray on Android or V2rayN or NekoBox on PC as a subscription link and update every 15 minute!
 
 or Scan QRCode Below:
 
@@ -14,9 +14,6 @@ or Scan QRCode Below:
 <!-- CONTACT -->
 ## Contact
 
-Milad Tahanian - [Telegram](https://t.me/miladtahanian) | [Instagram](https://instagram.com/tahanianmilad) | [MailMe](mailto:miladtahanianofficial@gmail.com)
+man icarusam - [Telegram](https://t.me/proxyfig) 
+Project Link: [https://github.com/inicarus/ini/](https://github.com/inicarus/ini/)
 
-Project Link: [https://github.com/miladtahanian/V2RayCFGDumper/](https://github.com/miladtahanian/V2RayCFGDumper/)
-
-[product-screenshot]: images/shot.jpg
-[qrcode]: images/download.png
