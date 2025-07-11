@@ -289,7 +289,11 @@ newaddresses = [
        "https://t.me/s/Speeds_vpn1",
        "https://t.me/s/Airdorap_Free",
        "https://t.me/s/VPN_SOLVE"
-       "https://t.me/s/bglvps"
+       "https://t.me/s/bglvps",
+       "https://t.me/s/YamYamProxy",
+       "https://t.me/s/ProtoLandCo",
+       "https://t.me/s/ArV2ray",
+       "https://t.me/s/ConfigX2ray"
 ]
 
 def remove_duplicates(input_list):
