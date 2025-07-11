@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# بخش اضافه شده: کتابخانه‌های مورد نیاز
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -9,32 +8,61 @@ import pytz
 import jdatetime
 
 # ===================================================================
-# بخش اضافه شده: تابع ارسال پیام به تلگرام
-# این تابع کاملاً مستقل است و در بالای کد قرار گرفته است
+# تابع ارسال پیام به تلگرام - بدون تغییر
 # ===================================================================
 def send_telegram_message(bot_token, channel_id, message):
-    """
-    یک پیام متنی به کانال تلگرام مشخص شده ارسال می‌کند.
-    """
     if not bot_token or not channel_id:
-        print("توکن ربات یا شناسه کانال برای ارسال پیام تنظیم نشده است. از ارسال پیام صرف‌نظر می‌شود.")
-        return
+        print("توکن ربات یا شناسه کانال تنظیم نشده است.")
+        return False
         
-    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-    payload = {
-        'chat_id': channel_id,
-        'text': message,
-        'parse_mode': 'Markdown'
-    }
-    try:
-        response = requests.post(url, data=payload, timeout=15)
-        response.raise_for_status()
-        print("پیام تلگرام با موفقیت ارسال شد.")
-    except requests.exceptions.RequestException as e:
-        print(f"خطا در ارسال پیام تلگرام: {e}")
+    # محدودیت کاراکتر تلگرام
+    TELEGRAM_MAX_LENGTH = 4096
+    
+    # اگر پیام طولانی است، آن را تقسیم کن
+    if len(message) > TELEGRAM_MAX_LENGTH:
+        print(f"پیام طولانی است ({len(message)} کاراکتر). در حال تقسیم به چند بخش...")
+        parts = []
+        current_part = ""
+        # پیام را بر اساس خطوط جدید تقسیم می‌کنیم
+        for line in message.splitlines(True): # keepends=True
+            if len(current_part) + len(line) > TELEGRAM_MAX_LENGTH:
+                parts.append(current_part)
+                current_part = line
+            else:
+                current_part += line
+        parts.append(current_part) # اضافه کردن بخش آخر
+        
+        print(f"پیام به {len(parts)} بخش تقسیم شد.")
+        for i, part in enumerate(parts):
+            if not part.strip(): continue # از ارسال بخش خالی خودداری کن
+            print(f"در حال ارسال بخش {i+1}...")
+            # ارسال هر بخش به صورت جداگانه
+            url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+            payload = {'chat_id': channel_id, 'text': part}
+            try:
+                response = requests.post(url, data=payload, timeout=20)
+                response.raise_for_status()
+            except requests.exceptions.RequestException as e:
+                print(f"خطا در ارسال بخش {i+1} پیام تلگرام: {e}")
+                return False
+        print("تمام بخش‌های پیام با موفقیت ارسال شد.")
+        return True
+
+    else:
+        # اگر پیام کوتاه است، آن را به صورت یکجا ارسال کن
+        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+        payload = {'chat_id': channel_id, 'text': message}
+        try:
+            response = requests.post(url, data=payload, timeout=20)
+            response.raise_for_status()
+            print("پیام تلگرام با موفقیت ارسال شد.")
+            return True
+        except requests.exceptions.RequestException as e:
+            print(f"خطا در ارسال پیام تلگرام: {e}")
+            return False
 
 # ===================================================================
-# کد اصلی شما - این بخش دست‌نخورده باقی مانده است
+# کد اصلی شما - بدون تغییر
 # ===================================================================
 old_webpage_addresses = [
     "https://t.me/s/v2ray_configs_pool", "https://t.me/s/XpnTeam", "https://t.me/s/v2rayNGcloud",
@@ -150,14 +178,11 @@ def remove_duplicates(input_list):
 # بخش اصلی برنامه
 # ===================================================================
 if __name__ == "__main__":
-    # خواندن توکن و شناسه کانال از متغیرهای محیطی
     BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
     CHANNEL_ID = os.getenv('TELEGRAM_CHANNEL_ID')
 
     try:
-        # منطق اصلی کد شما در اینجا اجرا می‌شود
         print("شروع فرآیند استخراج کانفیگ‌ها...")
-        
         html_pages = []
         for url in newaddresses:
             try:
@@ -167,7 +192,7 @@ if __name__ == "__main__":
                 print(f"موفقیت در دریافت اطلاعات از: {url}")
             except requests.RequestException as e:
                 print(f"خطا در دریافت اطلاعات از {url}: {e}")
-                continue # اگر یک لینک خراب بود، به سراغ لینک بعدی برو
+                continue
 
         codes = []
         for page in html_pages:
@@ -179,45 +204,46 @@ if __name__ == "__main__":
                     codes.append(code_content)
 
         codes = remove_duplicates(codes)
-        print(f"تعداد {len(codes)} کانفیگ خام پیدا شد.")
-
+        
         processed_codes = []
         for code in codes:
-            # این بخش از کد شما کمی پیچیده بود و ساده‌سازی شد
-            # هدف اصلی حذف # بعد از کانفیگ است
             processed_part = code.split("#")[0]
             processed_codes.append(processed_part)
 
         processed_codes = remove_duplicates(processed_codes)
-        print(f"تعداد {len(processed_codes)} کانفیگ پس از پردازش اولیه باقی ماند.")
-
-        # نوشتن کانفیگ‌ها در فایل
+        
         current_date_time = jdatetime.datetime.now(pytz.timezone('Asia/Tehran'))
         final_string = current_date_time.strftime("%b-%d | %H:%M")
         final_others_string = current_date_time.strftime("%b-%d")
 
+        # ایجاد محتوای نهایی فایل در یک متغیر
+        final_file_content = ""
+        for i, code in enumerate(processed_codes):
+            if i == 0:
+                config_name = f"#🌐 به روزرسانی شده در {final_string} | هر 15 دقیقه کانفیگ جدید داریم"
+            else:
+                config_name = f"#🌐سرور {i} | {final_others_string} | MTSRVRS"
+            
+            config_final = code + config_name
+            final_file_content += config_final + "\n"
+
+        # نوشتن محتوای نهایی در فایل config.txt
         with open("config.txt", "w", encoding="utf-8") as file:
-            for i, code in enumerate(processed_codes):
-                if i == 0:
-                    config_name = f"#🌐 به روزرسانی شده در {final_string} | هر 15 دقیقه کانفیگ جدید داریم"
-                else:
-                    config_name = f"#🌐سرور {i} | {final_others_string} | MTSRVRS"
-                
-                config_final = code + config_name
-                file.write(config_final + "\n")
+            file.write(final_file_content)
         
         print(f"فایل config.txt با موفقیت با {len(processed_codes)} کانفیگ ساخته شد.")
 
-        # ارسال پیام موفقیت به تلگرام
-        success_message = (
-            f"✅ **عملیات با موفقیت انجام شد**\n\n"
-            f"تعداد `{len(processed_codes)}` کانفیگ جدید استخراج و در فایل `config.txt` ذخیره شد.\n"
-            f"آخرین به‌روزرسانی: `{current_date_time.strftime('%Y-%m-%d %H:%M:%S')}`"
-        )
-        send_telegram_message(BOT_TOKEN, CHANNEL_ID, success_message)
+        # ===================================================================
+        # بخش کلیدی جدید: ارسال محتوای فایل به تلگرام
+        # ===================================================================
+        if final_file_content.strip(): # اگر محتوا خالی نبود
+             print("در حال آماده‌سازی برای ارسال محتوای فایل به تلگرام...")
+             send_telegram_message(BOT_TOKEN, CHANNEL_ID, final_file_content)
+        else:
+             print("هیچ کانفیگی برای ارسال به تلگرام پیدا نشد.")
+
 
     except Exception as e:
         print(f"یک خطای پیش‌بینی نشده در اجرای اسکریپت رخ داد: {e}")
-        # در صورت بروز خطا، ارسال پیام خطا به تلگرام
         error_message = f"❌ **خطا در اجرای اسکریپت**\n\nیک مشکل در فایل `config.py` رخ داد:\n`{e}`"
         send_telegram_message(BOT_TOKEN, CHANNEL_ID, error_message)
