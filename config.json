@@ -1,0 +1,657 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1080,
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 01 - 🇩🇪 SS-英国-NF解锁德国地区非自制剧-ChatGPT-TikTok-YouTube-45.150.32.13:14628",
+      "server": "45.150.32.13",
+      "server_port": 14628,
+      "method": "chacha20-ietf-poly1305",
+      "password": "DKyRdoqUUllYmRLWlZZczVHelc4"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 02 - 🇱🇹LT立陶宛 14.0MB/s",
+      "server": "45.87.175.28",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 03 - 🇱🇹 SS-立陶宛>荷兰-NF解锁荷兰自制剧-ChatGPT-TikTok-YouTube-45.87.175.28:8080",
+      "server": "45.87.175.28",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 04 - 🇺🇸 美国",
+      "server": "switcher-nick-croquet.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "9tqhMdIrTkgQ46PvhyAtMH"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 05 - 🇫🇷FR法国",
+      "server": "81.19.137.222",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "a58fa62b4944ddbf"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 06 - 6元高速机场：cczzuu.top",
+      "server": "51.21.249.115",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 07 - 🇩🇪 SS-德国-NF解锁德国地区非自制剧-ChatGPT-TikTok-YouTube-147.45.178.200:57456",
+      "server": "147.45.178.200",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "a58fa62b4944ddbf"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 08 - 🇬🇧 SS-英国-NF解锁英国地区非自制剧-ChatGPT-TikTok-YouTube-46.226.163.225:57456",
+      "server": "46.226.163.225",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "c40641c1f89e7acb"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 09 - 🇦🇺AU澳大利亚 3.8MB/s",
+      "server": "185.177.229.245",
+      "server_port": 1866,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oXGp1+ihlfKg826H"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 10 - 🇭🇰 香港2|@ripaojiedian",
+      "server": "156.251.179.135",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "2b5fad3874e5",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mode=websocket;mux=8;path=/aqwshiog;host=hk6v1.dsjsapp.com;tls"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 11 - 🇯🇵 日本|@stairnode",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8766,
+      "method": "rc4-md5",
+      "password": "efanccyun",
+      "plugin": "simple-obfs",
+      "plugin_opts": "obfs=http;obfs-host=202509121565513-hDcp24etDx.download.microsoft.com"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 12 - 🇳🇱NL荷兰 544.7KB/s",
+      "server": "213.109.147.242",
+      "server_port": 62685,
+      "method": "chacha20-ietf-poly1305",
+      "password": "VpKABcOpNNA0l5G2AVOmw8"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 13 - 🇳🇱 SS-荷兰-NF解锁荷兰地区非自制剧-ChatGPT-TikTok-YouTube-213.109.147.242:62685",
+      "server": "213.109.147.242",
+      "server_port": 62685,
+      "method": "chacha20-ietf-poly1305",
+      "password": "VpKABcOpNNA0l5G2AVOmw8"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 14 - 日本2|@ripaojiedian",
+      "server": "137.220.142.139",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "8808e9f11454",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mode=websocket;path=/nvcnjrmkggoy;host=jp5v1.lingjfjkm002.com;tls"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 15 - 🇯🇵 日本2|@stairnode",
+      "server": "137.220.142.139",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "8808e9f11454",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mode=websocket;tls;host=jp5v1.lingjfjkm002.com;path=/nvcnjrmkggoy;"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 16 - 🇫🇷 SS-法国-NF解锁法国地区非自制剧-ChatGPT-TikTok-YouTube-81.19.137.222:57456",
+      "server": "81.19.137.222",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "a58fa62b4944ddbf"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 17 - 🇯🇵 日本|@ripaojiedian",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8766,
+      "method": "rc4-md5",
+      "password": "efanccyun"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 18 - 🇺🇸US美国2 33.5KB/s",
+      "server": "switcher-nick-croquet.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "9tqhMdIrTkgQ46PvhyAtMH"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 19 - tg频道:@ripaojiedian",
+      "server": "51.21.249.115",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 20 - 🇺🇸 SS-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-204.136.10.115:1866",
+      "server": "204.136.10.115",
+      "server_port": 1866,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oXGp1+ihlfKg826H"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 21 - 🇺🇸 美国2|@ripaojiedian",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8774,
+      "method": "rc4-md5",
+      "password": "efanccyun"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 22 - 🇳🇱NL荷兰2",
+      "server": "164.92.156.41",
+      "server_port": 24206,
+      "method": "chacha20-ietf-poly1305",
+      "password": "zI7kiNZ0UfV9cXB73a4nrD"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 23 - 🇯🇵 日本|@ripaojiedian",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8766,
+      "method": "rc4-md5",
+      "password": "efanccyun",
+      "plugin": "obfs-local",
+      "plugin_opts": "obfs=http;obfs-host=202509121565513-hDcp24etDx.download.microsoft.com"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 24 - 🇹🇼 台湾2|@ripaojiedian",
+      "server": "36.234.94.86",
+      "server_port": 10078,
+      "method": "chacha20-ietf-poly1305",
+      "password": "d51c1aa9-1c96-44a4-b54c-46d0dec0578f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 25 - 🇺🇸 美国2|@stairnode",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8774,
+      "method": "rc4-md5",
+      "password": "efanccyun",
+      "plugin": "simple-obfs",
+      "plugin_opts": "obfs=http;obfs-host=202509121565513-hDcp24etDx.download.microsoft.com"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 26 - 🇭🇰 香港5|@ripaojiedian",
+      "server": "43.199.87.121",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 27 - 🇦🇺 SS-德国-NF解锁澳大利亚自制剧-ChatGPT-TikTok-185.177.229.245:1866",
+      "server": "185.177.229.245",
+      "server_port": 1866,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oXGp1+ihlfKg826H"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 28 - 🇯🇵 日本5|@ripaojiedian",
+      "server": "57.183.17.7",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 29 - 🇯🇵 日本2|@ripaojiedian",
+      "server": "137.220.142.139",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "8808e9f11454"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 30 - 🇯🇵JP日本3",
+      "server": "137.220.142.150",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "8a6ca14c0936"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 31 - 台湾2|@ripaojiedian",
+      "server": "36.234.94.86",
+      "server_port": 10078,
+      "method": "chacha20-ietf-poly1305",
+      "password": "d51c1aa9-1c96-44a4-b54c-46d0dec0578f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 32 - 🇩🇪DE德国2",
+      "server": "46.101.245.131",
+      "server_port": 44354,
+      "method": "chacha20-ietf-poly1305",
+      "password": "9RviNa4tscjcmCB408vLSg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 33 - 🇫🇷 SS-法国-NF解锁法国地区非自制剧-ChatGPT-TikTok-YouTube-62.210.88.22:443",
+      "server": "62.210.88.22",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WDavBimDmH2QLxljf5PSO1"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 34 - 🇨🇳 台湾2|@ripaojiedian",
+      "server": "36.234.94.86",
+      "server_port": 10078,
+      "method": "chacha20-ietf-poly1305",
+      "password": "d51c1aa9-1c96-44a4-b54c-46d0dec0578f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 35 - 台湾|@ripaojiedian",
+      "server": "118.170.223.243",
+      "server_port": 10017,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4d296e8d-366b-4353-9e8b-513d83f36765"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 36 - 🇩🇪 SS-斯洛文尼亚-NF解锁德国地区非自制剧-ChatGPT-TikTok-YouTube-45.144.54.33:34803",
+      "server": "45.144.54.33",
+      "server_port": 34803,
+      "method": "chacha20-ietf-poly1305",
+      "password": "LiHQX9cDbdooBHlIg0eiqQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 37 - 🇬🇧GB英国",
+      "server": "46.226.163.225",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "c40641c1f89e7acb"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 38 - 🇨🇳 台湾|@stairnode",
+      "server": "118.170.223.243",
+      "server_port": 10017,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4d296e8d-366b-4353-9e8b-513d83f36765"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 39 - 🇭🇰HK香港",
+      "server": "shenzhen99.fkfkd.cn",
+      "server_port": 4772,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2cf69d5f-0293-4ddb-bbfc-145de8dfc570"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 40 - 🇭🇰 香港5|@stairnode",
+      "server": "43.199.87.121",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 41 - 🇭🇰HK香港2",
+      "server": "156.251.179.135",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "2b5fad3874e5"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 42 - 🇺🇸US美国7 28.2MB/s",
+      "server": "104.167.197.25",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "360e21d21977dc11"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 43 - 🇩🇪 SS-德国-NF解锁德国地区非自制剧-ChatGPT-TikTok-YouTube-46.101.245.131:44354",
+      "server": "46.101.245.131",
+      "server_port": 44354,
+      "method": "chacha20-ietf-poly1305",
+      "password": "9RviNa4tscjcmCB408vLSg"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 44 - 🇺🇸US美国 2.7MB/s",
+      "server": "204.136.10.115",
+      "server_port": 1866,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oXGp1+ihlfKg826H"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 45 - 🇯🇵 日本2|@ripaojiedian",
+      "server": "137.220.142.139",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "8808e9f11454",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mode=websocket;path=/nvcnjrmkggoy;host=jp5v1.lingjfjkm002.com;tls"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 46 - 日本5|@ripaojiedian",
+      "server": "57.183.17.7",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 47 - 🇭🇰 香港5|@ripaojiedian",
+      "server": "43.199.87.121",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 48 - 🇯🇵JP日本5",
+      "server": "57.181.174.7",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 49 - 日本|@ripaojiedian",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8766,
+      "method": "rc4-md5",
+      "password": "efanccyun",
+      "plugin": "obfs-local",
+      "plugin_opts": "obfs=http;obfs-host=202509121565513-hDcp24etDx.download.microsoft.com"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 50 - 🇹🇼TW台湾2",
+      "server": "118.170.235.179",
+      "server_port": 10004,
+      "method": "chacha20-ietf-poly1305",
+      "password": "b2d5215f-22f4-456c-a724-789431f2b930"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 51 - 🇯🇵 日本5|@ripaojiedian",
+      "server": "57.183.17.7",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 52 - 🇭🇰HK香港3",
+      "server": "16.162.87.199",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 53 - tg频道:@ripaojiedian ",
+      "server": "51.21.249.115",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 54 - 🇹🇼TW台湾",
+      "server": "36.234.112.65",
+      "server_port": 10043,
+      "method": "chacha20-ietf-poly1305",
+      "password": "981b2115-f9d3-4fea-a072-f9f3d3f980e6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 55 - 🇺🇸 美国2|@ripaojiedian",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8774,
+      "method": "rc4-md5",
+      "password": "efanccyun",
+      "plugin": "obfs-local",
+      "plugin_opts": "obfs=http;obfs-host=202509121565513-hDcp24etDx.download.microsoft.com"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 56 - 🇹🇼 台湾|@ripaojiedian",
+      "server": "118.170.223.243",
+      "server_port": 10017,
+      "method": "chacha20-ietf-poly1305",
+      "password": "4d296e8d-366b-4353-9e8b-513d83f36765"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 57 - 🇯🇵 日本",
+      "server": "arxfw2b78fi2q9hzylhn.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Nk9asglDzHzjktVzTkvhaA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 58 - 🇺🇸US美国6",
+      "server": "172.233.128.126",
+      "server_port": 1866,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oXGp1+ihlfKg826H"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 59 - 🇩🇪DE德国3",
+      "server": "147.45.178.200",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "a58fa62b4944ddbf"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 60 - 美国2|@ripaojiedian",
+      "server": "cn01.efan8867801.xyz",
+      "server_port": 8774,
+      "method": "rc4-md5",
+      "password": "efanccyun",
+      "plugin": "obfs-local",
+      "plugin_opts": "obfs=http;obfs-host=202509121565513-hDcp24etDx.download.microsoft.com"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 61 - 🇯🇵 日本5|@stairnode",
+      "server": "57.183.17.7",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 62 - 香港5|@ripaojiedian",
+      "server": "43.199.87.121",
+      "server_port": 16888,
+      "method": "aes-256-gcm",
+      "password": "amazongreatvpn"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 63 - 🇨🇳 台湾2|@stairnode",
+      "server": "36.234.94.86",
+      "server_port": 10078,
+      "method": "chacha20-ietf-poly1305",
+      "password": "d51c1aa9-1c96-44a4-b54c-46d0dec0578f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 64 - 🇯🇵JP日本 43.4KB/s",
+      "server": "arxfw2b78fi2q9hzylhn.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Nk9asglDzHzjktVzTkvhaA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 65 - 🇷🇺RU俄罗斯",
+      "server": "185.242.86.156",
+      "server_port": 54170,
+      "method": "chacha20-ietf-poly1305",
+      "password": "36ZCHabUSfKjfQEvJ4HDV"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 66 - 🇫🇷 SS-法国-NF解锁法国地区非自制剧-ChatGPT-TikTok-YouTube-107.191.63.241:30665",
+      "server": "107.191.63.241",
+      "server_port": 30665,
+      "method": "chacha20-ietf-poly1305",
+      "password": "44fe4b7d-cd48-45fc-a036-60ea40e4a96c"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 67 - 🇭🇰 香港2|@ripaojiedian",
+      "server": "156.251.179.135",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "2b5fad3874e5"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 68 - 香港2|@ripaojiedian",
+      "server": "156.251.179.135",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "2b5fad3874e5",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mode=websocket;mux=8;path=/aqwshiog;host=hk6v1.dsjsapp.com;tls"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 69 - 🇺🇸 SS-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-104.167.197.25:57456",
+      "server": "104.167.197.25",
+      "server_port": 57456,
+      "method": "chacha20-ietf-poly1305",
+      "password": "360e21d21977dc11"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 70 - 🇳🇱 SS-荷兰-NF解锁荷兰地区非自制剧-ChatGPT-TikTok-YouTube-164.92.156.41:24206",
+      "server": "164.92.156.41",
+      "server_port": 24206,
+      "method": "chacha20-ietf-poly1305",
+      "password": "zI7kiNZ0UfV9cXB73a4nrD"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 71 - 🇫🇷FR法国2",
+      "server": "62.210.88.22",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WDavBimDmH2QLxljf5PSO1"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 72 - 🇩🇪DE德国4",
+      "server": "45.144.54.33",
+      "server_port": 34803,
+      "method": "chacha20-ietf-poly1305",
+      "password": "LiHQX9cDbdooBHlIg0eiqQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 73 - 🇭🇰 香港2|@stairnode",
+      "server": "156.251.179.135",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "2b5fad3874e5",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mode=websocket;tls;mux=4;host=hk6v1.dsjsapp.com;path=/aqwshiog;mux=mux=4;;"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 74 - 🇺🇸 SS-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-172.233.128.126:1866",
+      "server": "172.233.128.126",
+      "server_port": 1866,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oXGp1+ihlfKg826H"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 75 - 🇩🇪DE德国",
+      "server": "45.150.32.13",
+      "server_port": 14628,
+      "method": "chacha20-ietf-poly1305",
+      "password": "DKyRdoqUUllYmRLWlZZczVHelc4"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "Proxy 76 - tg频道:@ripaojiedian",
+      "server": "51.21.249.115",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto-proxy",
+      "outbounds": [
+        "Proxy 01 - 🇩🇪 SS-英国-NF解锁德国地区非自制剧-ChatGPT-TikTok-YouTube-45.150.32.13:14628",
+        "Proxy 02 - 🇱🇹LT立陶宛 14.0MB/s",
+        "Proxy 03 - 🇱🇹 SS-立陶宛>荷兰-NF解锁荷兰自制剧-ChatGPT-TikTok-YouTube-45.87.175.28:8080",
+        "Proxy 04 - 🇺🇸 美国",
+        "Proxy 05 - 🇫🇷FR法国",
+        "Proxy 06 - 6元高速机场：cczzuu.top",
+        "Proxy 07 - 🇩🇪 SS-德国-NF解锁德国地区非自制剧-ChatGPT-TikTok-You
